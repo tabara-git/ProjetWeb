@@ -1,0 +1,66 @@
+﻿@model ProjetWeb.Models.Personne
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail d'une Personne</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telephone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telephone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.note)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.departement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.departement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_naissance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_naissance)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary edit" }) |
+    <a asp-action="Index">Revenir à la liste</a>
+</div>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ProjetWeb.Models.Personne>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste Des Personnes</h1>
+
+<p>
+    <a asp-action="Create">+ Nouvelle Personne </a>
+</p>
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.departement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_naissance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.departement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date_naissance)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>|
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>|
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Supprim</a>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿@model ProjetWeb.Models.Personne
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Creer une Personne</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
+            <div class="form-group">
+                <label asp-for="Prenom" class="control-label">PRENOM</label>
+                <input asp-for="Prenom" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nom" class="control-label">NOM</label>
+                <input asp-for="nom" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telephone" class="control-label">NUMERO DE TELEPHONE</label>
+                <input asp-for="telephone" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mail" class="control-label">ADRESSE MAIL</label>
+                <input asp-for="mail" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="note" class="control-label">NOTE</label>
+                <input asp-for="note" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="departement" class="control-label">DEPARTEMENT</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>IT</option>
+                    <option>Marketing</option>
+                </select>
+                @*<input asp-for="departement" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />*@
+                <span asp-validation-for="departement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_naissance" class="control-label">DATE DE NAISSANCE</label>
+                <input asp-for="date_naissance" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                <span asp-validation-for="date_naissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ajouter" class="btn btn-primary" />  <a asp-action="Index">Revenir à la liste</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <a asp-action="Index">Revenir à la liste</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

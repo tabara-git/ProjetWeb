@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "C:\\Users\\Tabara\\Downloads\\angular-1.7.5\\angular-1.7.5",
+      "destination": "wwwroot/lib/angular-1.7/"
+    }
+  ]
+}
